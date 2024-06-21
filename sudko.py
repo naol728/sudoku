@@ -12,3 +12,10 @@ def display_board(board):
     print()
     if (i + 1) % 3 == 0:
       print("-" * 27)
+def find_empty_cell(board):
+  """Finds an empty cell in the Sudoku board."""
+  for row in range(9):
+    for col in range(9):
+      if board[row][col] == 0:
+        return row, col
+  return None
